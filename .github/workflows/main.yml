@@ -18,12 +18,9 @@ jobs:
         with:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
-          plugin_achievements: yes
-          plugin_achievements_threshold: C       # Display achievements with rank B or higher
-          plugin_achievements_secrets: yes       # Display unlocked secrets achievements
-#           plugin_achievements_ignored: octonaut  # Hide octonaut achievement
-          plugin_achievements_limit: 0           # Display all unlocked achievement matching threshold and secrets params
-#           plugin_achievements_display: compact   # Use compact display
+          plugin_achievements: no                # Disabled: plugin is chronically broken and renders a red "Unexpected error"
+          plugin_isocalendar: yes                # 3D contribution calendar (reliable replacement for the achievements block)
+          plugin_isocalendar_duration: full-year
           plugin_languages: yes
           plugin_languages_ignored: html, css                            # Don't let static-site markup skew the chart
           plugin_languages_details: percentage                           # Show percentage next to each language
